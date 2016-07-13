@@ -13,3 +13,9 @@ variable "aws_region" {
 variable "aws_availability_zone" {
     default = "eu-west-1a"
 }
+
+# certificates
+variable "withaflourish_arn" {
+    # the certificate ARN looks something like this:
+    default = "arn:aws:acm:REGION:ID:certificate/CERTIFICATE_ID"
+}
