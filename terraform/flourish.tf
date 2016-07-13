@@ -36,3 +36,11 @@ resource "aws_route53_record" "apex-flourish" {
 
     zone_id = "${aws_route53_zone.flourish.zone_id}"
 }
+
+resource "aws_route53_record" "slack-flourish" {
+    name = "slack"
+    type = "CNAME"
+    ttl = "3600"
+    records = ["slack-withaflourish-net.herokuapp.com"]
+    zone_id = "${aws_route53_zone.flourish.zone_id}"
+}
